@@ -119,13 +119,16 @@ a {
 
 .project-grid {
     margin-top: 50px;
-    width: 90vw;
+    width: 60vw;
     flex: 3;
-    /*   display: flex;
-  flex-direction: row; */
-    display: grid;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /*display: grid;
     grid-template-columns: repeat(3, var(--project-grid-width));
-    grid-template-rows: repeat(2, var(--project-grid-height));
+    grid-template-rows: repeat(2, var(--project-grid-height));*/
     justify-content: center;
     gap: 40px;
 }
@@ -362,18 +365,18 @@ a {
 
 @media (max-width: 1050px) {
     /* divide project grid */
-    .project-grid {
+    /*.project-grid {
         grid-template-columns: repeat(2, var(--project-grid-width));
         grid-template-rows: repeat(3, var(--project-grid-height));
-    }
+    }*/
 }
 
 @media (max-width: 700px) {
     /* divide project grid */
-    .project-grid {
+    /*.project-grid {
         grid-template-columns: repeat(1, var(--project-grid-width));
         grid-template-rows: repeat(6, var(--project-grid-height));
-    }
+    }*/
     /* change contact info layout */
     .contact-info {
         flex-direction: column;
