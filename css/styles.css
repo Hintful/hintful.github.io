@@ -117,6 +117,19 @@ a {
     flex: 1;
 }
 
+.project-page h2 {
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: -2px;
+    color: var(--main-color);
+
+    /* animations */
+    animation-name: breathe;
+    animation-duration: 4s;
+    animation-iteration-count: 5; 
+}
+
 .project-grid {
     margin-top: 50px;
     width: 60vw;
@@ -424,5 +437,14 @@ a {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes breathe {
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
     }
 }
