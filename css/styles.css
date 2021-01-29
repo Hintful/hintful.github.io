@@ -184,6 +184,12 @@ a {
     transition: opacity 0.2s ease-in-out;
 }
 
+.project-description hr {
+    background: linear-gradient(to right, red, blue);
+    height: 1px;
+    border: 0px;
+}
+
 .project-pic:hover .project-description {
     opacity: 1;
     /* transitions */
