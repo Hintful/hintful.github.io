@@ -145,6 +145,12 @@ a {
     grid-template-rows: repeat(2, var(--project-grid-height));*/
     justify-content: center;
     gap: 40px;
+
+    padding: 75px 0px 75px 0px;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,.2);
+    border-radius: 7px;
+    backdrop-filter: blur(1px);
 }
 
 .project-tile {
@@ -161,6 +167,7 @@ a {
     font-size: 13px;
     display: inline-block;
     width: auto;
+    height: auto;
     text-transform: uppercase;
     /*border: 0px;*/
     /*border: 1px solid var(--main-color);*/
@@ -189,13 +196,58 @@ a {
     bottom: 0;
     left: 0;
     position: absolute;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     visibility: false;
     opacity: 0;
     color: var(--main-color);
-    padding: 5px 20px 20px 20px;
+    height: 98%; /* how to fix? */
+    padding: 5px 20px 0px 20px;
+
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(1px);
     /* transitions */
     transition: opacity 0.2s ease-in-out;
+}
+
+.project-description p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.project-description-top {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-github a {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.project-github {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border: 1px solid var(--main-color);
+    padding: 0px 4px 0px 4px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-left: auto;
+}
+
+.project-github:hover {
+    background-color: var(--main-color);
+}
+
+.project-github:hover a {
+    color: var(--sub-color);
 }
 
 .project-description hr {
@@ -217,7 +269,7 @@ a {
 
 .project-title {
     display: flex;
-    height: 50px;
+    height: 49px; /* originally 50px */
     width: 300px;
     background-color: var(--main-color);
     justify-content: center;
@@ -228,6 +280,13 @@ a {
     box-shadow: inset 0 0 0 0;
     /* bg pattern */
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJ0lEQVQYV2NkQAN8fHwNjMhiIIFPnz4hBGECIEVglcgCYEF0AZAgAMUoELBVRObmAAAAAElFTkSuQmCC) repeat;
+    /* transitions */
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-title:hover {
+    background-color: #243547;
+    box-shadow: inset 0 -2px 0 var(--highlight-sub-color);
     /* transitions */
     transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -262,13 +321,6 @@ a {
     transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
-.project-title:hover {
-    background-color: #243547;
-    box-shadow: inset 0 -2px 0 var(--highlight-sub-color);
-    /* transitions */
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
 .project-title .project-title-bracket {
     font-size: 24px;
     padding-left: 8px;
@@ -286,6 +338,56 @@ a {
     /* transitions */
     transition: opacity 0.15s eaes-in-out;
 }
+
+.skills-page {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    margin: 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-color);
+    align-items: center;
+    /* bg pattern */
+
+    background: linear-gradient(to right, #bc77d5 10%, #00d4ff);
+    background-attachment: fixed;
+
+    /*background-image: linear-gradient(to right, #7777d5, #a677d5);*/
+}
+
+.skills-page h1 {
+    font-family: Abril Fatface;
+    font-size: 44px;
+    font-weight: 400;
+    color: var(--main-color);
+    flex: 1;
+
+}
+
+.skills-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 60%;
+    height: 20rem;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.07);
+    backdrop-filter: blur(5px);
+}
+
+.skills-box h1 {
+    flex: 1;
+    margin-top: 120px;
+    font-size: 30px;
+}
+
 
 .contact-page {
     margin: 0;
@@ -375,7 +477,7 @@ a {
 ) repeat;
 }
 
-#project {
+#skills, #project {
     display: block;
     position: relative;
     visibility: hidden;
