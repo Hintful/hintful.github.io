@@ -632,8 +632,14 @@ a {
 }
 
 @media (max-width: 550px) {
-  .skills-page h1 {
-/*     width: 450px; */
+  #nav-item {
+    font-size: 14px;
+  }
+  #main-logo {
+    font-size: 18px;
+  }
+  .nav-item {
+    gap: 5px;
   }
 }
 @media (max-width: 414px) {
