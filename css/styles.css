@@ -647,6 +647,9 @@ a {
   .nav-item {
     font-size: 14px;
   }
+  #main-logo {
+    display: none;
+  }
   .welcome-section h1 {
     font-size: 40px;
   }
