@@ -235,9 +235,9 @@ a {
     width: auto;
     height: auto;
     border: 1px solid var(--main-color);
-    padding: 0px 4px 0px 4px;
+    padding: 0px 4px 2px 4px;
     border-radius: 3px;
-    margin-top: 15px;
+    margin-top: 18px;
     margin-right: 5px;
     margin-left: auto;
 }
