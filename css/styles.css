@@ -370,22 +370,97 @@ a {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    padding-top: 30px;
     width: 60%;
     height: 20rem;
 
     align-items: center;
-    justify-content: center;
 
-    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    /*box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
     border-radius: 3px;
     background-color: rgba(255,255,255,0.07);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);*/
 }
 
 .skills-box h1 {
     flex: 1;
     margin-top: 120px;
     font-size: 30px;
+}
+
+.certificate-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    margin-left: 0px;
+
+    box-shadow: 0 0 2rem 0 rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(5px);
+
+    /* transitions */
+    transition: margin-left 0.3s ease-out;
+}
+
+.certificate-item:hover {
+    margin-left: 15px;
+
+    /* transitions */
+    transition: margin-left 0.3s ease-out;
+}
+
+.certificate-item:hover .certificate-date {
+    visibility: visible;
+}
+
+.certificate-item .certificate-date {
+    visibility: hidden;
+    width: max-content;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(255,255,255,0.6);
+    letter-spacing: -1px;
+
+    position: absolute;
+    z-index: 1;
+    top: 7px;
+    right: 102%;
+}
+
+.certificate-name {
+    padding: 10px 5px 10px 15px;
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+
+.certificate-description {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+
+.certificate-name i {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+#freecodecamp-icon {
+    color: #ff7d00;
+}
+
+.certificate-link {
+    font-size: 20px;
+    padding: 10px 15px 10px 5px;
+    margin-left: auto;
+}
+
+.certificate-link a {
+    text-decoration: none;
+    color: var(--main-color);
 }
 
 
