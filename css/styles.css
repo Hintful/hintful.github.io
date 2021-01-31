@@ -413,11 +413,16 @@ a {
 }
 
 .certificate-item:hover .certificate-date {
-    visibility: visible;
+    /*visibility: visible;*/
+    opacity: 1;
+
+    /* transitions */
+    transition: opacity 0.1s ease-in-out;
 }
 
 .certificate-item .certificate-date {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    opacity: 0;
     width: max-content;
     text-align: center;
     border-radius: 5px;
@@ -429,6 +434,9 @@ a {
     z-index: 1;
     top: 7px;
     right: 102%;
+
+    /* transitions */
+    transition: opacity 0.1s ease-in-out;
 }
 
 .certificate-name {
