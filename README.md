@@ -1,2 +1,2 @@
-# hintful.github.io
-A personal website.
+# kurtchoi.dev
+A personal website - deployed at [kurtchoi.dev](https://kurtchoi.dev)
