@@ -35,7 +35,8 @@ html {
 }
 
 .nav-item {
-    max-width: 80px;
+    /*max-width: 80px;*/
+    width: auto;
     max-height: 20px;
     flex: 1;
     padding: 20px;
@@ -68,6 +69,25 @@ html {
 .nav-item a:visited {
     text-decoration: none;
     color: var(--main-color);
+}
+
+#main-logo {
+    display: flex;
+    justify-content: center;
+    font-family: Abril Fatface;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -1px;
+
+    background: linear-gradient(to right, #bc77d5, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#main-logo:hover {
+    /* animations */
+    -webkit-animation: gradient-anim 0s ease infinite;
+    animation: gradient-anim 0s ease infinite;
 }
 
 a {
@@ -653,15 +673,45 @@ a {
     }
 }
 
-@keyframes gradient {
+@keyframes gradient-anim {
     0% {
+        /*background: linear-gradient(to right, #bc77d5 0%, #00d4ff 50%);*/
         background-position: 0% 50%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     50% {
+        /*background: linear-gradient(to right, #bc77d5 100%, #00d4ff 50%);*/
         background-position: 100% 50%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     100% {
+        /*background: linear-gradient(to right, #bc77d5 0%, #00d4ff 50%);*/
         background-position: 0% 50%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@-webkit-keyframes gradient-anim {
+    0% {
+        /*background: linear-gradient(to right, #bc77d5 0%, #00d4ff 50%);*/
+        background-position: 0% 50%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50% {
+        /*background: linear-gradient(to right, #bc77d5 100%, #00d4ff 50%);*/
+        background-position: 100% 50%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100% {
+        /*background: linear-gradient(to right, #bc77d5 0%, #00d4ff 50%);*/
+        background-position: 0% 50%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
