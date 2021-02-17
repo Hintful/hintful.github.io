@@ -99,9 +99,11 @@ const ProjectView = () => {
       { expandProjectMenu && 
         <motion.div className="project-view"
           initial={{
+            x: -50,
             opacity: 0
           }}
           animate={{
+            x: 0,
             opacity: 1,
             transition: {
               duration: 1.5
