@@ -177,6 +177,13 @@ body, html {
           border-radius: 15px;
           outline: 1px solid transparent; /* required to prevent trailing junk pixels after animations */
           box-shadow: 0px 14px 18px -8px rgba(0,0,0,0.3);
+
+          user-drag: none; 
+          user-select: none;
+          -moz-user-select: none;
+          -webkit-user-drag: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
         }
       }
       .project-info {
