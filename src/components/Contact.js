@@ -29,7 +29,7 @@ const variants = {
   }
 }
 
-const notifyEmailCopySuccess = () => toast.success("E-mail has been copied to your clipboard!");
+const notifyEmailCopySuccess = () => toast.success("E-mail has been copied to your clipboard!", { duration: 3500 });
 
 const Contact = () => {
   return (  
