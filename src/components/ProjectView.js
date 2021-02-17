@@ -14,22 +14,22 @@ const ProjectView = () => {
 
   const projects = [
     {
+      img: "./img/project/kurtchoi_dev.png",
+      title: "kurtchoi.dev",
+      date: "Feb, 2021",
+      githubLink: "https://github.com/Hintful/hintful.github.io",
+      desc: "A React/JavaScript-based personal portfolio website. While developing this website, the biggest focus was the re-usability of various functional components, and this aspect can be observed in various areas of the website!",
+      tags: ['React','JavaScript','SCSS','HTML'],
+      demoLink: "https://kurtchoi.dev"
+    },
+    {
       img: "./img/project/todo-list.png",
       title: "To-do List",
       date: "Feb, 2021",
       githubLink: "https://github.com/Hintful/TodoList",
-      desc: "A React-based application that keeps track of user's To-do List, where user can interactively add or remove various tasks. Supports saving via local storage.",
+      desc: "A React-based application that keeps track of user's To-do List, where user can interactively add or remove various tasks. Supports saving via local storage. This is the project that first introduced me to React Hooks/Context API.",
       tags: ['React','JavaScript','CSS','HTML'],
       demoLink: "https://kurtchoi.dev/TodoList"
-    },
-    {
-      img: "./img/project/pomo-timer.png",
-      title: "Pomo Timer",
-      date: "Feb, 2021",
-      githubLink: "https://github.com/Hintful/pomo-timer",
-      desc: "A React/JavaScript-based timer application that is designed for the usage of Pomodoro technique.",
-      tags: ['React','JavaScript', 'SCSS', 'HTML'],
-      demoLink: "https://kurtchoi.dev/pomo-timer"
     },
     {
       img: "./img/project/game_of_ur_ai.png",
@@ -39,6 +39,15 @@ const ProjectView = () => {
       desc: "A collaborative project on developing an AI agent that can play the oldest known board game in history, The Royal Game of Ur, using Genetic Algorithm approach with standard crossover and mutation functions.",
       tags: ['Python', 'Artificial Intelligence'],
       demoLink: ""
+    },
+    {
+      img: "./img/project/pomo-timer.png",
+      title: "Pomo Timer",
+      date: "Feb, 2021",
+      githubLink: "https://github.com/Hintful/pomo-timer",
+      desc: "A React/JavaScript-based timer application that is designed for the usage of Pomodoro technique.",
+      tags: ['React','JavaScript', 'SCSS', 'HTML'],
+      demoLink: "https://kurtchoi.dev/pomo-timer"
     },
     {
       img: "./img/project/calc_js.png",
@@ -72,7 +81,7 @@ const ProjectView = () => {
       title: "Random Quote Generator",
       date: "Feb, 2021",
       githubLink: "https://github.com/Hintful/random-quote-generator",
-      desc: "A simple React-based that generates random quotes. A JSON file containing various quotes is fetched via fetch() API, and parsed to be stored internally.",
+      desc: "A simple React-based that generates random quotes. A JSON file containing various quotes is fetched via fetch() API, and parsed to be stored internally. This is my first application using React.js Framework.",
       tags: ['React','JavaScript', 'CSS','jQuery','HTML'],
       demoLink: "https://kurtchoi.dev/random-quote-generator"
     }

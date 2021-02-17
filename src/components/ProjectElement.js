@@ -12,6 +12,11 @@ const notifyDemoUnavailable = () => toast.error("Live Demo for this project is n
   duration: 5000
 });
 
+const notifySelfRedirect = () => toast("You're viewing it right now!", {
+  icon: '😊',
+  duration: 4000
+});
+
 const ProjectElement = ({project}) => {
   
   return (  
@@ -59,7 +64,19 @@ const ProjectElement = ({project}) => {
           )) }
         </div>
         <div className="project-demo">
-          { project.demoLink !== "" ?
+          { project.demoLink === "https://kurtchoi.dev" ?
+            <AwesomeButton
+              type="primary"
+              size="large"
+              ripple="true"
+              onPress={() => {
+                notifySelfRedirect();
+              }}
+            >
+              <i class="fas fa-play"></i>&nbsp;Live Demo
+            </AwesomeButton>
+            :
+            project.demoLink !== "" ?
             <AwesomeButton
               type="primary"
               size="large"
