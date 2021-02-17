@@ -18,7 +18,6 @@ const listVariants = {
   hover: {
     x: 5,
     rotate: 5,
-    // textShadow: "0px 0px 15px rgb(85,206,235)",
     transition: {
       duration: 0.2
     }
@@ -38,13 +37,13 @@ const menuItemVariants = {
     }
   },
   hover: {
-    // color: "skyblue",
     x: 5,
   }
 }
 
 const Navbar = () => {
   
+  /* menu label states/functions */
   const [homeTextVisible, setHomeTextVisible] = useState(false);
   const [aboutTextVisible, setAboutTextVisible] = useState(false);
   const [projectsTextVisible, setProjectsTextVisible] = useState(false);
@@ -65,6 +64,10 @@ const Navbar = () => {
     setVisible(!visible);
   }
 
+  /* menu context states */
+  const [menu, setMenu] = useState(0);
+  const addEmphasis = " emphasis";
+
   return (  
     <div class="navbar">
       <motion.ul
@@ -79,16 +82,16 @@ const Navbar = () => {
             whileHover="hover"
             variants={menuItemVariants}
           >
-            {/* <a href={link.link}> */}
             <Link to={link.url}>
               <motion.div className="menu-container" onMouseEnter={() => toggleLabel(link.labelVisible, link.toggleLabel)} onMouseLeave={() => toggleLabel(link.labelVisible, link.toggleLabel)}
+                onClick={() => setMenu(i)} // for visual indication of current page on navbar
+
                 whileHover="hover"
                 variants={menuItemVariants}
               >
                 {showText[i] && <span className="menu-label">{link.page}</span>}
-                 <i class={link.icon}></i>
+                {menu === i ? <i class={link.icon + addEmphasis}></i> : <i class={link.icon}></i>}
               </motion.div>
-            {/* </a> */}
             </Link>
           </motion.li>
         ))}

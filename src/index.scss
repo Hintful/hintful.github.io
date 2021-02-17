@@ -250,14 +250,14 @@ body, html {
     font-weight: 300;
     color: skyblue;
   }
-  .emphasis {
-    background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .strong {
-    font-weight: 600;
-  }
+}
+.emphasis {
+  background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.strong {
+  font-weight: 600;
 }
 
 .about {
