@@ -5,8 +5,12 @@ import { motion } from 'framer-motion';
 import SkillTag from './tags/SkillTag';
 import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import toast, { Toaster } from 'react-hot-toast';
+
+const notifyDemoUnavailable = () => toast.error("Live Demo for this project is not available. Please check out the GitHub directly!",
+{
+  duration: 5000
+});
 
 const ProjectElement = ({project}) => {
   
@@ -55,6 +59,7 @@ const ProjectElement = ({project}) => {
           )) }
         </div>
         <div className="project-demo">
+          { project.demoLink !== "" ?
             <AwesomeButton
               type="primary"
               size="large"
@@ -64,6 +69,19 @@ const ProjectElement = ({project}) => {
             >
               <i class="fas fa-play"></i>&nbsp;Live Demo
             </AwesomeButton>
+            :
+            <AwesomeButton
+              type="primary"
+              size="large"
+              ripple="true"
+              onPress={() => {
+                notifyDemoUnavailable();
+              }}
+            >
+              <i class="fas fa-play"></i>&nbsp;Live Demo
+            </AwesomeButton>
+          }
+          <Toaster />
         </div>
       </div>
     </div>

@@ -435,7 +435,6 @@ body, html {
   
   
     .certificate-name i {
-        color: var(--main-color);
         font-weight: 600;
     }
     
@@ -478,6 +477,37 @@ body, html {
   font-weight: 600;
   font-size: 2.5em;
   margin-bottom: 20px;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+
+.project-expand-button {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 50px;
+  width: 300px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%);
+  color: white;
+  font-family: Raleway;
+  opacity: 1;
+
+  /* transitions */
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-expand-button:hover {
+  opacity: 0.7;
+
+  /* transitions */
+  transition: opacity 0.2s ease-in-out;
 }
 
 
