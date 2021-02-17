@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion'
 import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
+import toast, { Toaster } from 'react-hot-toast';
 
 const variants = {
   hidden: {
@@ -27,6 +28,16 @@ const variants = {
     }
   }
 }
+
+const notifyCVUnavailable = () => toast("Sorry, CV is not yet available.", {
+  icon: '😢',
+  duration: 5000
+});
+
+const notifyContact = () => toast("Please contact me directly. Thank you!", {
+  icon: '😊',
+  duration: 7000
+})
 
 const About = () => {
   return (  
@@ -59,13 +70,18 @@ const About = () => {
       <div className="cv-button-div">
         <AwesomeButton 
           type="primary"
-          href="#"
+          href=""
           size="large"
           // target="_blank"
+          onPress={() => {
+            notifyCVUnavailable();
+            setTimeout(notifyContact, 1500);
+          }}
           ripple
         >
-          <i class="fas fa-file"></i>&nbsp;&nbsp;Curriculum Vitae
+          <i class="fas fa-file-alt"></i>&nbsp;&nbsp;Curriculum Vitae
         </AwesomeButton>
+        <Toaster />
       </div>
     </motion.div>
   );
