@@ -13,7 +13,6 @@ const ProjectView = () => {
   }
 
   const projects = [
-    // #1
     {
       img: "./img/project/todo-list.png",
       title: "To-do List",
@@ -23,7 +22,6 @@ const ProjectView = () => {
       tags: ['React','JavaScript','CSS','HTML'],
       demoLink: "https://kurtchoi.dev/TodoList"
     },
-
     {
       img: "./img/project/pomo-timer.png",
       title: "Pomo Timer",
@@ -33,7 +31,6 @@ const ProjectView = () => {
       tags: ['React','JavaScript', 'SCSS', 'HTML'],
       demoLink: "https://kurtchoi.dev/pomo-timer"
     },
-    // #2
     {
       img: "./img/project/game_of_ur_ai.png",
       title: "The Royal Game of Ur AI",

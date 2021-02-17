@@ -77,19 +77,21 @@ const Navbar = () => {
       >
         { links.map((link, i) => (
           <motion.li
+            onClick={() => setMenu(i)} // for visual indication of current page on navbar
+            onMouseEnter={() => toggleLabel(link.labelVisible, link.toggleLabel)} 
+            onMouseLeave={() => toggleLabel(link.labelVisible, link.toggleLabel)}
             initial="hidden"
             animate="visible"
             whileHover="hover"
             variants={menuItemVariants}
           >
             <Link to={link.url}>
-              <motion.div className="menu-container" onMouseEnter={() => toggleLabel(link.labelVisible, link.toggleLabel)} onMouseLeave={() => toggleLabel(link.labelVisible, link.toggleLabel)}
-                onClick={() => setMenu(i)} // for visual indication of current page on navbar
+              <motion.div className="menu-container"
 
                 whileHover="hover"
                 variants={menuItemVariants}
               >
-                {showText[i] && <span className="menu-label">{link.page}</span>}
+                {(showText[i] || menu === i) && <span className="menu-label emphasis">{link.page}</span>}
                 {menu === i ? <i class={link.icon + addEmphasis}></i> : <i class={link.icon}></i>}
               </motion.div>
             </Link>
