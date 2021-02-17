@@ -42,7 +42,12 @@ const Skills = () => {
     { name: "Bootstrap", img: "./img/icon/bootstrap.svg" },
     { name: "jQuery", img: "./img/icon/jquery.svg" },
     { name: "Scheme", img: "./img/icon/scheme.svg" },
+    { name: "Git", img: "./img/icon/git.png" },
+    { name: "Linux", img: "./img/icon/linux.svg" },
+    { name: "Bash", img: "./img/icon/bash.svg" },
+    { name: "Framer Motion", img: "./img/icon/framer-motion.svg" },
     { name: "LaTeX", img: "./img/icon/latex.svg" },
+    { name: "Photoshop", img: "./img/icon/photoshop.svg" },
     { name: "Word", img: "./img/icon/msword.svg" },
     { name: "Excel", img: "./img/icon/msexcel.svg" }
   ]
