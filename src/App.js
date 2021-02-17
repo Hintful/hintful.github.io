@@ -10,9 +10,24 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import { Scrollbars } from 'react-custom-scrollbars';
 import RestoreScroll from './components/RestoreScroll';
+import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+
+function usePageViews() {
+  const pvLocation = useLocation();
+  useEffect(() => {
+    if(!window.GA_INIT) {
+      ReactGA.initialize("UA-186165133-1");
+      window.GA_INIT = true;
+    }
+    ReactGA.set({ page: pvLocation.pathname });
+    ReactGA.pageview(pvLocation.pathname);
+  }, [pvLocation]);
+}
 
 function App() {
   const location = useLocation();
+  usePageViews();
 
   return (
     <>
