@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProjectElement from './ProjectElement';
 import { motion } from 'framer-motion';
 
-const NUM_MAIN_PROJECT = 3; // number of projects shown before collapsable menu
+const NUM_MAIN_PROJECT = 4; // number of projects shown before collapsable menu
 
 const ProjectView = () => {
 
@@ -13,6 +13,15 @@ const ProjectView = () => {
   }
 
   const projects = [
+    {
+      img: "./img/project/kDrive.png",
+      title: "kDrive",
+      date: "Feb, 2021",
+      githubLink: "https://github.com/Hintful/kDrive",
+      desc: "A React-based Cloud storage application created using Firebase authentication platform and React-Bootstrap framework. Currently, only authentication functionality is implemented.",
+      tags: ['React','JavaScript','Bootstrap','Firebase','CSS'],
+      demoLink: "https://kurtchoi.dev/kDrive"
+    },
     {
       img: "./img/project/kurtchoi_dev.png",
       title: "kurtchoi.dev",
