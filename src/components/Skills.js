@@ -41,6 +41,7 @@ const Skills = () => {
     { name: "React.js", img: "./img/icon/react.png" },
     { name: "Bootstrap", img: "./img/icon/bootstrap.svg" },
     { name: "jQuery", img: "./img/icon/jquery.svg" },
+    { name: "Firebase", img: "./img/icon/firebase.svg" },
     { name: "SQL", img: "./img/icon/sql.svg" },
     { name: "Scheme", img: "./img/icon/scheme.svg" },
     { name: "Git", img: "./img/icon/git.png" },
