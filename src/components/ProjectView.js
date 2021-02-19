@@ -18,7 +18,7 @@ const ProjectView = () => {
       title: "kDrive",
       date: "Feb, 2021",
       githubLink: "https://github.com/Hintful/kDrive",
-      desc: "A React-based Cloud storage application created using Firebase authentication platform and React-Bootstrap framework. Full Cloud storage functionalities have been implemented.",
+      desc: "A React-based Cloud storage application created using Google's Firebase platform for authentication and data storage, and React-Bootstrap framework. Full Cloud storage functionalities have been implemented.",
       tags: ['React','JavaScript','Bootstrap','Firebase','CSS'],
       demoLink: "https://kurtchoi.dev/kDrive"
     },

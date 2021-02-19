@@ -32,6 +32,7 @@ const Skills = () => {
   const skillsArray = [
     { name: "Python", img: "./img/icon/python.svg" },
     { name: "JavaScript", img: "./img/icon/js.svg" },
+    { name: "TypeScript", img: "./img/icon/typescript.svg" },
     { name: "C", img: "./img/icon/c.svg" },
     { name: "C++", img: "./img/icon/cpp.svg" },
     { name: "Java", img: "./img/icon/java.svg" },
@@ -43,6 +44,7 @@ const Skills = () => {
     { name: "jQuery", img: "./img/icon/jquery.svg" },
     { name: "Firebase", img: "./img/icon/firebase.svg" },
     { name: "SQL", img: "./img/icon/sql.svg" },
+    { name: "API", img: "./img/icon/api.png" },
     { name: "Scheme", img: "./img/icon/scheme.svg" },
     { name: "Git", img: "./img/icon/git.png" },
     { name: "Linux", img: "./img/icon/linux.svg" },
