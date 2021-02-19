@@ -89,7 +89,6 @@ const ProjectElement = ({project}) => {
               target="_blank"
               ripple="true"
               onPress={() => {
-                notifySelfRedirect();
                 ReactGA.event({
                   category: 'Click Event',
                   action: 'Clicked ' + project.title + ' Live Demo button'
