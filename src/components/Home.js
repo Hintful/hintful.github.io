@@ -28,6 +28,8 @@ const variants = {
 }
 
 const Home = () => {
+
+  const gradient = ""
   
   return (  
     <motion.div className="home"
@@ -52,7 +54,11 @@ const Home = () => {
               repeatDelay: 3 
             } }}
         >👋</motion.div><br/>
-        My name is <span style={{color: 'skyblue'}}>Kurt</span>!
+        My name is <span style={{
+          background: "linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%",
+          webkitBackgroundClip: "text",
+          webkitTextFillColor: "transparent"
+          }}>Kurt</span>!
         <motion.div className="typewriter"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -69,15 +75,16 @@ const Home = () => {
             onInit={(typewriter) => {typewriter
               // typewriter actions
               .pauseFor(2000)
-              .typeString("I'm a <span style='color: skyblue'>Software Engineer</span>!")
+              // .typeString("I'm a <span style='color: skyblue'>Software Engineer</span>!")
+              .typeString("I'm a <span style='background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent'>Software Engineer</span>!")
               .pauseFor(1500)
               .deleteChars(18)
               .pauseFor(500)
-              .typeString("<span style='color: skyblue'>Web Developer</span>!")
+              .typeString("<span style='background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent'>Web Developer</span>!")
               .pauseFor(1500)
               .deleteChars(17)
               .pauseFor(500)
-              .typeString("an <span style='color: skyblue'> Avid Learner</span>!")
+              .typeString("an <span style='background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent'> Avid Learner</span>!")
               .pauseFor(1500)
               .deleteAll()
               .start();
