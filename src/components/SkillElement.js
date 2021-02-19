@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { motion } from 'framer-motion';
+import ReactGA from 'react-ga';
 
 const SkillElement = ({skill}) => {
   return (  
@@ -15,6 +16,12 @@ const SkillElement = ({skill}) => {
           duration: 0.5,
           yoyo: Infinity
         }
+      }}
+      onMouseDown={() => {
+        ReactGA.event({
+          category: 'Click Event',
+          action: 'Clicked on ' + skill + ' Skill Grid'
+        });
       }}
     >
       <div class="skill-img">

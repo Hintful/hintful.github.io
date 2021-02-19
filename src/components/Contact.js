@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import toast, { Toaster } from 'react-hot-toast';
+import ReactGA from 'react-ga';
 
 const variants = {
   hidden: {
@@ -52,6 +53,10 @@ const Contact = () => {
             size="medium"
             ripple
             onPress={() => {
+              ReactGA.event({
+                category: 'Click Event',
+                action: 'Clicked Copy E-mail button'
+              });
               navigator.clipboard.writeText("choi.kurt3@gmail.com");
               notifyEmailCopySuccess();
             }}
@@ -63,6 +68,12 @@ const Contact = () => {
             href="https://www.linkedin.com/in/kurt-c-a75a2a102/"
             size="medium"
             target="_blank"
+            onPress={() => {
+              ReactGA.event({
+                category: 'Click Event',
+                action: 'Clicked Contact tab LinkedIn button'
+              });
+            }}
           >
             <i class="fab fa-linkedin"></i>&nbsp;LinkedIn
           </AwesomeButton>
@@ -71,6 +82,12 @@ const Contact = () => {
             href="https://github.com/Hintful"
             size="medium"
             target="_blank"
+            onPress={() => {
+              ReactGA.event({
+                category: 'Click Event',
+                action: 'Clicked Contact tab GitHub button'
+              });
+            }}
           >
             <i class="fab fa-github"></i>&nbsp;GitHub
           </AwesomeButton>
@@ -79,6 +96,12 @@ const Contact = () => {
             href="https://instagram.com/hx.rim"
             size="medium"
             target="_blank"
+            onPress={() => {
+              ReactGA.event({
+                category: 'Click Event',
+                action: 'Clicked Contact tab Instagram button'
+              });
+            }}
           >
             <i class="fab fa-instagram"></i>&nbsp;Instagram
           </AwesomeButton>

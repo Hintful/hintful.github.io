@@ -28,8 +28,6 @@ const variants = {
 }
 
 const Home = () => {
-
-  const gradient = ""
   
   return (  
     <motion.div className="home"

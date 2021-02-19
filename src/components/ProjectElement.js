@@ -6,6 +6,7 @@ import SkillTag from './tags/SkillTag';
 import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import toast, { Toaster } from 'react-hot-toast';
+import ReactGA from 'react-ga';
 
 const notifyDemoUnavailable = () => toast.error("Live Demo for this project is not available. Please check out the GitHub directly!",
 {
@@ -52,7 +53,7 @@ const ProjectElement = ({project}) => {
         </div>
         <div className="project-info-second">
           <DateTag date={project.date} />
-          <GHTag link={project.githubLink} />
+          <GHTag link={project.githubLink} project={project.title} />
         </div>
         <hr/>
         <div className="project-description">
@@ -71,6 +72,10 @@ const ProjectElement = ({project}) => {
               ripple="true"
               onPress={() => {
                 notifySelfRedirect();
+                ReactGA.event({
+                  category: 'Click Event',
+                  action: 'Clicked ' + project.title + ' Live Demo button'
+                });
               }}
             >
               <i class="fas fa-play"></i>&nbsp;Live Demo
@@ -83,6 +88,13 @@ const ProjectElement = ({project}) => {
               href={project.demoLink}
               target="_blank"
               ripple="true"
+              onPress={() => {
+                notifySelfRedirect();
+                ReactGA.event({
+                  category: 'Click Event',
+                  action: 'Clicked ' + project.title + ' Live Demo button'
+                });
+              }}
             >
               <i class="fas fa-play"></i>&nbsp;Live Demo
             </AwesomeButton>
@@ -93,6 +105,10 @@ const ProjectElement = ({project}) => {
               ripple="true"
               onPress={() => {
                 notifyDemoUnavailable();
+                ReactGA.event({
+                  category: 'Click Event',
+                  action: 'Clicked ' + project.title + ' Live Demo button'
+                });
               }}
             >
               <i class="fas fa-play"></i>&nbsp;Live Demo

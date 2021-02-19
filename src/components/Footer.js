@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
+import ReactGA from 'react-ga';
 
 const containerVariants = {
   hidden: {
@@ -47,17 +48,38 @@ const Footer = () => {
       animate="visible"
     >
       <ReactTooltip place="top" type="dark" effect="solid"/>
-      <a href="https://github.com/Hintful" target="_blank">
+      <a href="https://github.com/Hintful" target="_blank"
+        onClick={() => {
+          ReactGA.event({
+            category: 'Click Event',
+            action: 'Clicked Footer GitHub button'
+          });
+        }}
+      >
         <div className="contact-info">
           <p data-tip="GitHub"><i class="fab fa-github-square fa-2x"></i></p>
         </div>
       </a>
-      <a href="https://www.linkedin.com/in/kurt-c-a75a2a102/" target="_blank">
+      <a href="https://www.linkedin.com/in/kurt-c-a75a2a102/" target="_blank"
+        onClick={() => {
+          ReactGA.event({
+            category: 'Click Event',
+            action: 'Clicked Footer LinkedIn button'
+          });
+        }}
+      >
         <div className="contact-info">
           <p data-tip="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></p>
         </div>
       </a>
-      <a href="https://instagram.com/hx.rim" target="_blank">
+      <a href="https://instagram.com/hx.rim" target="_blank"
+        onClick={() => {
+          ReactGA.event({
+            category: 'Click Event',
+            action: 'Clicked Footer Instagram button'
+          });
+        }}
+      >
         <div className="contact-info">
           <p data-tip="Instagram"><i class="fab fa-instagram-square fa-2x"></i></p>
         </div>

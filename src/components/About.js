@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import toast, { Toaster } from 'react-hot-toast';
+import ReactGA from 'react-ga';
 
 const variants = {
   hidden: {
@@ -74,6 +75,10 @@ const About = () => {
           size="large"
           // target="_blank"
           onPress={() => {
+            ReactGA.event({
+              category: 'Click Event',
+              action: 'Clicked CV Button in About tab'
+            });
             notifyCVUnavailable();
             setTimeout(notifyContact, 1500);
           }}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ReactGA from 'react-ga';
 
 const variants = {
   hidden: {
@@ -29,7 +30,14 @@ const Logo = () => {
   
   return (  
     <div className="logo">
-      <h2>
+      <h2
+        onMouseEnter={() => {
+          ReactGA.event({
+            category: 'Hover Event',
+            action: 'Hovered Logo text'
+          });
+        }}
+      >
         { logoString.map((c,i) =>
           <motion.div style={{ display: "inline-block" }}
           custom={i} initial="hidden" animate="visible" 

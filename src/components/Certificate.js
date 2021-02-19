@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import { motion } from 'framer-motion';
+import ReactGA from 'react-ga';
 
 const Certificate = ({certificate}) => {
   return (  
@@ -13,7 +14,14 @@ const Certificate = ({certificate}) => {
       <i class="far fa-star emphasis"></i> &nbsp;{certificate.name}
       <span class="certificate-description">(from &nbsp;<i class="fab fa-free-code-camp" id="freecodecamp-icon"></i> freeCodeCamp.org)</span>
       <div class="certificate-link">
-        <a href={certificate.link} target="_blank">
+        <a href={certificate.link} target="_blank"
+          onClick={() => {
+            ReactGA.event({
+              category: 'Click Event',
+              action: 'Clicked ' + certificate.name + ' Link'
+            });
+          }}
+        >
           <i class="fas fa-external-link-alt emphasis"></i>
         </a>
       </div>

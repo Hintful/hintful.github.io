@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectElement from './ProjectElement';
 import { motion } from 'framer-motion';
+import ReactGA from 'react-ga';
 
 const NUM_MAIN_PROJECT = 4; // number of projects shown before collapsable menu
 
@@ -104,11 +105,24 @@ const ProjectView = () => {
       </div>
       
       { !expandProjectMenu ? 
-        <div className="project-expand-button" onClick={() => toggleExpandProject()}>
+        <div className="project-expand-button" 
+        onClick={() => {
+          toggleExpandProject()
+          ReactGA.event({
+            category: 'Click Event',
+            action: 'Clicked View More Projects button'
+          });
+        }}>
           View more projects &nbsp;<i class="fas fa-caret-down fa-lg"></i>
         </div>
         :
-        <div className="project-expand-button" onClick={() => toggleExpandProject()}>
+        <div className="project-expand-button" onClick={() => {
+          toggleExpandProject()
+          ReactGA.event({
+            category: 'Click Event',
+            action: 'Clicked Fold Projects button'
+          });
+        }}>
           Fold menu &nbsp;<i class="fas fa-caret-up fa-lg"></i>
         </div>
       }
