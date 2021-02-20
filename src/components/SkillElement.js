@@ -20,7 +20,7 @@ const SkillElement = ({skill}) => {
       onMouseDown={() => {
         ReactGA.event({
           category: 'Click Event',
-          action: 'Clicked on ' + skill + ' Skill Grid'
+          action: 'Clicked on ' + skill.name + ' Skill Grid'
         });
       }}
     >
