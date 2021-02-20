@@ -4,6 +4,7 @@ import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import toast, { Toaster } from 'react-hot-toast';
 import ReactGA from 'react-ga';
+import cv from "./doc/cv.pdf";
 
 const variants = {
   hidden: {
@@ -69,23 +70,24 @@ const About = () => {
       <br/>
       
       <div className="cv-button-div">
-        <AwesomeButton 
-          type="primary"
-          href=""
-          size="large"
-          // target="_blank"
-          onPress={() => {
-            ReactGA.event({
-              category: 'Click Event',
-              action: 'Clicked CV Button in About tab'
-            });
-            notifyCVUnavailable();
-            setTimeout(notifyContact, 1500);
-          }}
-          ripple
-        >
-          <i class="fas fa-file-alt"></i>&nbsp;&nbsp;Curriculum Vitae
-        </AwesomeButton>
+        {/* <a href="./doc" download="cv.pdf"> */}
+        <a href={cv} target="_blank">
+          <AwesomeButton 
+            type="primary"
+            size="large"
+            onPress={() => {
+              ReactGA.event({
+                category: 'Click Event',
+                action: 'Clicked CV Button in About tab'
+              });
+              // notifyCVUnavailable();
+              // setTimeout(notifyContact, 1500);
+            }}
+            ripple
+          >
+            <i class="fas fa-file-alt"></i>&nbsp;&nbsp;Curriculum Vitae
+          </AwesomeButton>
+        </a>
         <Toaster />
       </div>
     </motion.div>
