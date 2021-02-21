@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.df61df7f.chunk.css",
-    "main.js": "/static/js/main.9be02f13.chunk.js",
-    "main.js.map": "/static/js/main.9be02f13.chunk.js.map",
+    "main.css": "/static/css/main.577017eb.chunk.css",
+    "main.js": "/static/js/main.df4a7282.chunk.js",
+    "main.js.map": "/static/js/main.df4a7282.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19d73685.js",
     "runtime-main.js.map": "/static/js/runtime-main.19d73685.js.map",
     "static/css/2.d89d3188.chunk.css": "/static/css/2.d89d3188.chunk.css",
-    "static/js/2.2088f83d.chunk.js": "/static/js/2.2088f83d.chunk.js",
-    "static/js/2.2088f83d.chunk.js.map": "/static/js/2.2088f83d.chunk.js.map",
+    "static/js/2.2c7ca3bc.chunk.js": "/static/js/2.2c7ca3bc.chunk.js",
+    "static/js/2.2c7ca3bc.chunk.js.map": "/static/js/2.2c7ca3bc.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d89d3188.chunk.css.map": "/static/css/2.d89d3188.chunk.css.map",
-    "static/css/main.df61df7f.chunk.css.map": "/static/css/main.df61df7f.chunk.css.map",
-    "static/js/2.2088f83d.chunk.js.LICENSE.txt": "/static/js/2.2088f83d.chunk.js.LICENSE.txt",
+    "static/css/main.577017eb.chunk.css.map": "/static/css/main.577017eb.chunk.css.map",
+    "static/js/2.2c7ca3bc.chunk.js.LICENSE.txt": "/static/js/2.2c7ca3bc.chunk.js.LICENSE.txt",
     "static/media/api.png": "/static/media/api.ecca6e62.png",
     "static/media/bash.svg": "/static/media/bash.968f3f62.svg",
     "static/media/bootstrap.svg": "/static/media/bootstrap.7ebbb003.svg",
@@ -21,6 +21,7 @@
     "static/media/cpp.svg": "/static/media/cpp.a7cedc46.svg",
     "static/media/css3.svg": "/static/media/css3.a970faff.svg",
     "static/media/cv.pdf": "/static/media/cv.4f2bdedb.pdf",
+    "static/media/express.svg": "/static/media/express.6aa7d72b.svg",
     "static/media/firebase.svg": "/static/media/firebase.7840999a.svg",
     "static/media/framer-motion.svg": "/static/media/framer-motion.49b6f510.svg",
     "static/media/game_of_ur_ai.png": "/static/media/game_of_ur_ai.cb448d7d.png",
@@ -32,8 +33,10 @@
     "static/media/kurtchoi_dev.png": "/static/media/kurtchoi_dev.3b6e0b08.png",
     "static/media/latex.svg": "/static/media/latex.0e26a673.svg",
     "static/media/linux.svg": "/static/media/linux.67832299.svg",
+    "static/media/mongodb.svg": "/static/media/mongodb.d5a9f33e.svg",
     "static/media/msexcel.svg": "/static/media/msexcel.bbc1130c.svg",
     "static/media/msword.svg": "/static/media/msword.baefbedd.svg",
+    "static/media/nodejs.svg": "/static/media/nodejs.dd47e26e.svg",
     "static/media/photoshop.svg": "/static/media/photoshop.21b3c1e0.svg",
     "static/media/pomo-timer.png": "/static/media/pomo-timer.0e2cdb9e.png",
     "static/media/python.svg": "/static/media/python.bd162648.svg",
@@ -49,8 +52,8 @@
   "entrypoints": [
     "static/js/runtime-main.19d73685.js",
     "static/css/2.d89d3188.chunk.css",
-    "static/js/2.2088f83d.chunk.js",
-    "static/css/main.df61df7f.chunk.css",
-    "static/js/main.9be02f13.chunk.js"
+    "static/js/2.2c7ca3bc.chunk.js",
+    "static/css/main.577017eb.chunk.css",
+    "static/js/main.df4a7282.chunk.js"
   ]
 }
