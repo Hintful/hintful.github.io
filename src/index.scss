@@ -334,8 +334,27 @@ body, html {
     .skills-grid-desc {
       font-family: Raleway;
       font-weight: 600;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       font-size: 24px;
+    }
+
+    .skills-grid-size-adjust {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      width: 80%;
+      justify-content: center;
+      padding-bottom: 50px;
+
+      .skill-grid-size-button {
+        font-size: 2rem;
+      }
+
+      .skill-grid-size-button:hover {
+        background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     .skills-grid {

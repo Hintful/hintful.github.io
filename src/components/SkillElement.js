@@ -3,11 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ReactGA from 'react-ga';
 
-const SkillElement = ({skill}) => {
+const SkillElement = ({skill, size}) => {
   return (  
-    <motion.div class="skill-element"
+    <motion.div class="skill-element" style={{width: size, height: size}}
       drag
-      dragConstraints={{ left: -400, right: 400, top: -400, bottom: 400 }}
+      dragConstraints={{ left: -700, right: 700, top: -700, bottom: 700 }}
       dragElastic={0.5}
       whileHover={{
         scale: 1.2,

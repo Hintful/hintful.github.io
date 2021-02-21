@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import SkillElement from './SkillElement';
 import ReactTooltip from 'react-tooltip';
 import Certificate from './Certificate';
+import { useState } from 'react';
+import { Slider } from '@material-ui/core';
 
 const variants = {
   hidden: {
@@ -40,9 +42,12 @@ const Skills = () => {
     { name: "Sass", img: "./img/icon/sass.svg" },
     { name: "HTML5", img: "./img/icon/html5.svg" },
     { name: "React.js", img: "./img/icon/react.png" },
+    { name: "Node.js", img: "./img/icon/nodejs.svg" },
+    { name: "Express.js", img: "./img/icon/express.svg" },
     { name: "Bootstrap", img: "./img/icon/bootstrap.svg" },
     { name: "jQuery", img: "./img/icon/jquery.svg" },
     { name: "Firebase", img: "./img/icon/firebase.svg" },
+    { name: "MongoDB", img: "./img/icon/mongodb.svg" },
     { name: "SQL", img: "./img/icon/sql.svg" },
     { name: "API", img: "./img/icon/api.png" },
     { name: "Scheme", img: "./img/icon/scheme.svg" },
@@ -68,8 +73,10 @@ const Skills = () => {
     name: "Front End Libraries Certification",
     link: "https://www.freecodecamp.org/certification/hintful/front-end-libraries",
     date: "Feb 9th, 2021"
-  }
-  ]
+  }]
+
+  const [skillGridSize, setSkillGridSize] = useState(100);
+
   return (  
     <motion.div className="skills page"
       variants={variants}
@@ -89,15 +96,24 @@ const Skills = () => {
               animate={{
                 y: [0,-5,5,-5,5,0],
                 transition: {
+                  delay: 3,
                   yoyo: Infinity,
                   repeatDelay: 3
                 }
               }}
             >draggable</motion.div>!
           </div>
+          <div className="skills-grid-size-adjust">
+            <div className="skill-grid-size-button" onClick={() => setSkillGridSize(Math.min(skillGridSize + 10, 200))}>
+              <i class="fas fa-plus-square"></i>
+            </div>
+            <div className="skill-grid-size-button" onClick={() => setSkillGridSize(Math.max(skillGridSize - 10, 70))}>
+              <i class="fas fa-minus-square"></i>
+            </div>
+          </div>
           <div className="skills-grid">
             { skillsArray.map(skill => (
-              <SkillElement skill={skill} />
+              <SkillElement skill={skill} size={skillGridSize} />
             ))}
           </div>
 
