@@ -24,6 +24,24 @@ const ProjectView = () => {
       demoLink: "https://kurtchoi.dev/kDrive"
     },
     {
+      img: "./img/project/babble.png",
+      title: "Babble",
+      date: "Feb, 2021",
+      githubLink: "https://github.com/Hintful/Babble",
+      desc: "A Firebase/React-based online chatting application. Supports 'leveling' by rewarding users with points when they send messages. Application is styled with Chakra UI.",
+      tags: ['React','Firebase','Chakra UI','CSS'],
+      demoLink: "https://kurtchoi.dev/Babble"
+    },
+    {
+      img: "./img/project/game_of_ur_ai.png",
+      title: "The Royal Game of Ur AI",
+      date: "Dec, 2020",
+      githubLink: "https://github.com/Hintful/game-of-ur-genetic-algorithm",
+      desc: "A collaborative project on developing an AI agent that can play the oldest known board game in history, The Royal Game of Ur, using Genetic Algorithm approach with standard crossover and mutation functions.",
+      tags: ['Python', 'Artificial Intelligence'],
+      demoLink: ""
+    },
+    {
       img: "./img/project/kurtchoi_dev.png",
       title: "kurtchoi.dev",
       date: "Feb, 2021",
@@ -40,15 +58,6 @@ const ProjectView = () => {
       desc: "A React-based application that keeps track of user's To-do List, where user can interactively add or remove various tasks. Supports saving via local storage. This is the project that first introduced me to React Hooks/Context API.",
       tags: ['React','JavaScript','CSS','HTML'],
       demoLink: "https://kurtchoi.dev/TodoList"
-    },
-    {
-      img: "./img/project/game_of_ur_ai.png",
-      title: "The Royal Game of Ur AI",
-      date: "Dec, 2020",
-      githubLink: "https://github.com/Hintful/game-of-ur-genetic-algorithm",
-      desc: "A collaborative project on developing an AI agent that can play the oldest known board game in history, The Royal Game of Ur, using Genetic Algorithm approach with standard crossover and mutation functions.",
-      tags: ['Python', 'Artificial Intelligence'],
-      demoLink: ""
     },
     {
       img: "./img/project/pomo-timer.png",
