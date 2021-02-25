@@ -24,6 +24,15 @@ const ProjectView = () => {
       demoLink: "https://kurtchoi.dev/kDrive"
     },
     {
+      img: "./img/project/cgol.png",
+      title: "Conway's Game of Life",
+      date: "Feb, 2021",
+      githubLink: "https://github.com/Hintful/game-of-life",
+      desc: "A React/TypeScript-based simulation for Conway's Game of Life. Features wrap-around/simulation speed control and load functionality from variety of grid presets.",
+      tags: ['React','TypeScript','CSS','Simulation'],
+      demoLink: "https://kurtchoi.dev/game-of-life"
+    },
+    {
       img: "./img/project/babble.png",
       title: "Babble",
       date: "Feb, 2021",
