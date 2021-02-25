@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.577017eb.chunk.css",
-    "main.js": "/static/js/main.4e92053c.chunk.js",
-    "main.js.map": "/static/js/main.4e92053c.chunk.js.map",
+    "main.js": "/static/js/main.03e5be38.chunk.js",
+    "main.js.map": "/static/js/main.03e5be38.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19d73685.js",
     "runtime-main.js.map": "/static/js/runtime-main.19d73685.js.map",
     "static/css/2.d89d3188.chunk.css": "/static/css/2.d89d3188.chunk.css",
@@ -21,7 +21,7 @@
     "static/media/chocolate_classifier.png": "/static/media/chocolate_classifier.685dcdd9.png",
     "static/media/cpp.svg": "/static/media/cpp.a7cedc46.svg",
     "static/media/css3.svg": "/static/media/css3.a970faff.svg",
-    "static/media/cv.pdf": "/static/media/cv.4f2bdedb.pdf",
+    "static/media/cv.pdf": "/static/media/cv.734f2587.pdf",
     "static/media/express.svg": "/static/media/express.6aa7d72b.svg",
     "static/media/firebase.svg": "/static/media/firebase.7840999a.svg",
     "static/media/framer-motion.svg": "/static/media/framer-motion.49b6f510.svg",
@@ -55,6 +55,6 @@
     "static/css/2.d89d3188.chunk.css",
     "static/js/2.6494fa83.chunk.js",
     "static/css/main.577017eb.chunk.css",
-    "static/js/main.4e92053c.chunk.js"
+    "static/js/main.03e5be38.chunk.js"
   ]
 }
