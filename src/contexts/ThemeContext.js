@@ -4,7 +4,7 @@ export const ThemeContext = createContext();
 
 const ThemeContextProvider = (props) => {
   const loadTheme = JSON.parse(localStorage.getItem('theme'));
-  const userTheme = loadTheme === null ? { isDarkTheme: true } : loadTheme;
+  const userTheme = loadTheme === null ? { isDarkTheme: false } : loadTheme;
 
   const [ theme, setTheme ] = useState( {
     isDarkTheme: userTheme.isDarkTheme,
