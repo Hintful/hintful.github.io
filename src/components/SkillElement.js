@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import ReactGA from 'react-ga';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const SkillElement = ({skill, size}) => {
+  const { theme } = useContext(ThemeContext);
   return (  
     <motion.div class="skill-element" style={{width: size, height: size}}
       drag
@@ -27,7 +29,12 @@ const SkillElement = ({skill, size}) => {
       <div class="skill-img">
         <img src={require(`${skill.img}`).default} />
       </div>
-      <div class="skill-name">
+      <div class="skill-name"
+        style={{ 
+          color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub,
+          fontWeight: theme.isDarkTheme ? 400 : 600
+        }}
+      >
         {skill.name}
       </div>
     </motion.div>

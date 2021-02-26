@@ -11,12 +11,14 @@ import Footer from './components/Footer';
 import { Scrollbars } from 'react-custom-scrollbars';
 import RestoreScroll from './components/RestoreScroll';
 import ReactGA from 'react-ga';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { ThemeContext } from './contexts/ThemeContext';
+import ToggleDarkMode from './components/ToggleDarkMode';
 
 function usePageViews() {
   const pvLocation = useLocation();
   useEffect(() => {
-    if(!window.GA_INIT) {
+    if (!window.GA_INIT) {
       ReactGA.initialize("UA-186165133-1");
       window.GA_INIT = true;
     }
@@ -29,13 +31,20 @@ function App() {
   const location = useLocation();
   usePageViews();
 
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <>
-      <Scrollbars 
+    <div className="container"
+      style={{
+        background: theme.isDarkTheme ? theme.darkTheme.main : theme.lightTheme.main
+      }}
+    >
+      <Scrollbars
         style={{ width: '100vw', height: '100vh' }}
-        // implement auto scrollToTop() on router page change
+      // implement auto scrollToTop() on router page change
       >
         <Header />
+        <ToggleDarkMode />
         <Navbar />
         <Footer />
         <AnimatePresence exitBeforeEnter>
@@ -45,12 +54,12 @@ function App() {
             <Route exact path="/skills" component={Skills} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/" component={Home} />
-            
+
 
           </Switch>
         </AnimatePresence>
       </Scrollbars>
-    </>
+    </div>
   );
 }
 

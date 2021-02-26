@@ -17,18 +17,41 @@ body, html {
   position: fixed;
 }
 
+.footer-darkmode {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 30px;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-darkmode:hover {
+  cursor: pointer;
+}
+
 .footer {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   right: 40px;
   bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  z-index: 1;
-  color: #272727;
+
+  .footer-contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    z-index: 1;
+  }
 
   a:link, a:visited {
-    color: #272727;
+    color: inherit;
   }
 
   a:hover {
@@ -105,7 +128,7 @@ body, html {
         
       }
       a:link, a:visited {
-        color: #454545;
+        color: inherit;
       }
       a:hover {
 
@@ -270,7 +293,7 @@ body, html {
   font-family: Roboto;
   font-size: 13px;
   font-weight: 600;
-  border: 1px solid black;
+  // border: 1px solid black;
   border-radius: 3px;
   padding: 3px 5px;
 
@@ -280,10 +303,31 @@ body, html {
 
 .github-link:link, .github-link:visited {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
-.project-github:hover {
+
+
+.project-github-dark {
+  border: 1px solid white;
+  color: white;
+  background: black;
+}
+
+.project-github-dark:hover {
+  color: black;
+  background: white;
+  /* transitions */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.project-github-light {
+  border: 1px solid black;
+  color: black;
+  background: white;
+}
+
+.project-github-light:hover {
   color: white;
   background: black;
 
@@ -303,20 +347,36 @@ body, html {
 .project-tag {
   font-family: Roboto;
   font-size: 14px;
-  color: white;
   padding: 1px 7px;
-  border: 1px solid black;
   border-radius: 16px;
-  background: black;
 
   /* transitions */
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-
 }
 
-.project-tag:hover {
+.project-tag-light {
+  color: white;
+  border: 1px solid black;
+  background: black;
+}
+
+.project-tag-light:hover {
   background: white;
   color: black;
+
+  /* transitions */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.project-tag-dark {
+  color: black;
+  border: 1px solid #ececec;
+  background: #ececec;
+}
+
+.project-tag-dark:hover {
+  background: black;
+  color: white;
 
   /* transitions */
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -333,7 +393,7 @@ body, html {
 
     .skills-grid-desc {
       font-family: Raleway;
-      font-weight: 600;
+      // font-weight: 600;
       margin-bottom: 20px;
       font-size: 24px;
     }
@@ -401,7 +461,7 @@ body, html {
         }
         .skill-name {
           font-family: Raleway;
-          font-weight: 600;
+          // font-weight: 600;
           font-size: 14px;
           text-align: center;
         }
@@ -426,7 +486,7 @@ body, html {
       width: 100%;
       flex-direction: row;
       font-family: Raleway;
-      font-weight: 600;
+      // font-weight: 600;
       font-size: 20px;
       border-radius: 3px;
       margin-left: 0px;

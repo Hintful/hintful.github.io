@@ -1,14 +1,21 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { motion } from 'framer-motion';
 import ReactGA from 'react-ga';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const Certificate = ({certificate}) => {
+  const { theme } = useContext(ThemeContext);
+
   return (  
     <motion.div data-tip={certificate.date} data-place="left" className="certificate-item"
       whileHover={{
         x: 10
+      }}
+      style={{
+        color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub,
+        fontWeight: theme.isDarkTheme ? 400 : 600
       }}
     >
       <i class="far fa-star emphasis"></i> &nbsp;{certificate.name}

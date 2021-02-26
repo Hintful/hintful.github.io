@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import ProjectView from './ProjectView';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const variants = {
   hidden: {
@@ -28,18 +29,21 @@ const variants = {
 }
 
 const Projects = () => {
-  return (  
+  const { theme } = useContext(ThemeContext);
+  return (
     <motion.div className="projects page"
-      variants={variants} 
+      variants={variants}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
-      <h2><i class="fas fa-code emphasis"></i>&nbsp;Projects </h2>
+      <h2 style={{ color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub }}>
+        <i class="fas fa-code emphasis"></i>&nbsp;Projects
+      </h2>
 
       <ProjectView />
     </motion.div>
   );
 }
- 
+
 export default Projects;

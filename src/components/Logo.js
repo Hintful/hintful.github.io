@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import ReactGA from 'react-ga';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const variants = {
   hidden: {
@@ -27,21 +28,25 @@ const variants = {
 
 const Logo = () => {
   const logoString = [..."< kurtchoi.dev />"];
+  const { theme } = useContext(ThemeContext);
   
   return (  
     <div className="logo">
       <h2
-        onMouseEnter={() => {
-          ReactGA.event({
-            category: 'Hover Event',
-            action: 'Hovered Logo text'
-          });
+        // onMouseEnter={() => {
+        //   ReactGA.event({
+        //     category: 'Hover Event',
+        //     action: 'Hovered Logo text'
+        //   });
+        // }}
+        style={{
+          color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub
         }}
       >
         { logoString.map((c,i) =>
           <motion.div style={{ display: "inline-block" }}
           custom={i} initial="hidden" animate="visible" 
-          whileHover="hover"
+          // whileHover="hover"
           variants={variants}>{c}</motion.div> 
         )}
       </h2>

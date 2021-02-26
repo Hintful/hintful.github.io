@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion'
 import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import toast, { Toaster } from 'react-hot-toast';
 import ReactGA from 'react-ga';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const variants = {
   hidden: {
@@ -33,12 +34,16 @@ const variants = {
 const notifyEmailCopySuccess = () => toast.success("E-mail has been copied to your clipboard!", { duration: 3500 });
 
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
   return (  
     <motion.div className="contact page"
       variants={variants}
       initial="hidden"
       animate="visible"
       exit="exit"
+      style={{
+        color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub
+      }}
     >
       <h2><i class="fas fa-code emphasis"></i>&nbsp;Contact </h2>
 

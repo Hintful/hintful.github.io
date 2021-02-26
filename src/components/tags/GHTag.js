@@ -1,9 +1,13 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import ReactGA from 'react-ga';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const GHTag = ({link, project}) => {
+  const { theme } = useContext(ThemeContext);
+  const githubClass = theme.isDarkTheme ? "project-github project-github-dark" : "project-github project-github-light";
+
   return (
     <a className="github-link" href={link} target="_blank"
       onClick={() => {
@@ -13,7 +17,7 @@ const GHTag = ({link, project}) => {
         });
       }}
     >
-      <div className="project-github">
+      <div className={githubClass}>
        <i class="fab fa-github"></i> GitHub
       </div>
     </a>

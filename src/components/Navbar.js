@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 // motion variants
 const listVariants = {
@@ -43,6 +44,8 @@ const menuItemVariants = {
 
 const Navbar = () => {
   
+  const { theme } = useContext(ThemeContext);
+
   /* menu label states/functions */
   const [homeTextVisible, setHomeTextVisible] = useState(false);
   const [aboutTextVisible, setAboutTextVisible] = useState(false);
@@ -74,6 +77,7 @@ const Navbar = () => {
         variants={listVariants}
         initial="hidden"
         animate="visible"
+        
       >
         { links.map((link, i) => (
           <motion.li
@@ -84,6 +88,9 @@ const Navbar = () => {
             animate="visible"
             whileHover="hover"
             variants={menuItemVariants}
+            style={{
+              color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub
+            }}
           >
             <Link to={link.url}>
               <motion.div className="menu-container"

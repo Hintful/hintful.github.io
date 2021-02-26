@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import DateTag from './tags/DateTag';
 import GHTag from './tags/GHTag';
 import { motion } from 'framer-motion';
@@ -7,6 +7,7 @@ import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import toast, { Toaster } from 'react-hot-toast';
 import ReactGA from 'react-ga';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const notifyDemoUnavailable = () => toast.error("Live Demo for this project is not available. Please check out the GitHub directly!",
 {
@@ -20,6 +21,8 @@ const notifySelfRedirect = () => toast("You're viewing it right now!", {
 
 const ProjectElement = ({project}) => {
   
+  const { theme } = useContext(ThemeContext);
+
   return (  
     <div className="project-element">
       <div className="project-img">
@@ -37,7 +40,12 @@ const ProjectElement = ({project}) => {
         <div className="project-info-top">
           <div className="project-title">
             <span className="emphasis"><i class="fas fa-chevron-right"></i></span>
-            <motion.div classname="title" style={{ display: 'inline-block', paddingLeft: 10 }}
+            <motion.div classname="title" 
+            style={{ 
+              display: 'inline-block', 
+              paddingLeft: 10,
+              color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub
+            }}
               animate={{
                 x: 10
               }}
@@ -55,8 +63,12 @@ const ProjectElement = ({project}) => {
           <DateTag date={project.date} />
           <GHTag link={project.githubLink} project={project.title} />
         </div>
-        <hr/>
-        <div className="project-description">
+        <hr style={{ background: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub }} />
+        <div className="project-description"
+          style={{
+            color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub
+          }}
+        >
           {project.desc}
         </div>
         <div className="project-tags">
@@ -67,7 +79,7 @@ const ProjectElement = ({project}) => {
         <div className="project-demo">
           { project.demoLink === "https://kurtchoi.dev" ?
             <AwesomeButton
-              type="primary"
+              type= {theme.isDarkTheme ? "gplus" : "primary"}
               size="large"
               ripple="true"
               onPress={() => {
@@ -83,7 +95,7 @@ const ProjectElement = ({project}) => {
             :
             project.demoLink !== "" ?
             <AwesomeButton
-              type="primary"
+              type= {theme.isDarkTheme ? "gplus" : "primary"}
               size="large"
               href={project.demoLink}
               target="_blank"
@@ -99,7 +111,7 @@ const ProjectElement = ({project}) => {
             </AwesomeButton>
             :
             <AwesomeButton
-              type="primary"
+              type= {theme.isDarkTheme ? "gplus" : "primary"}
               size="large"
               ripple="true"
               onPress={() => {

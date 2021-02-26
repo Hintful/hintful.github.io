@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import SkillElement from './SkillElement';
 import ReactTooltip from 'react-tooltip';
 import Certificate from './Certificate';
 import { useState } from 'react';
 import { Slider } from '@material-ui/core';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const variants = {
   hidden: {
@@ -31,6 +32,7 @@ const variants = {
   }
 }
 const Skills = () => {
+  const { theme } = useContext(ThemeContext);
   const skillsArray = [
     { name: "Python", img: "./img/icon/python.svg" },
     { name: "JavaScript", img: "./img/icon/js.svg" },
@@ -83,15 +85,20 @@ const Skills = () => {
       initial="hidden"
       animate="visible"
       exit="exit"
+      style={{
+        color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub
+      }}
     >
-      <ReactTooltip place="top" type="dark" effect="solid"/>
+      <ReactTooltip place="top" type={theme.isDarkTheme ? "light" : "dark"} effect="solid"/>
       <h2><i class="fas fa-code emphasis"></i>&nbsp;Skills and Certifications </h2>
       
         <div className="skills-content-container">
           <div className="skills-title title">
             <i class="fas fa-code emphasis"></i> Skills
           </div>
-          <div className="skills-grid-desc">
+          <div className="skills-grid-desc"
+            style={{ fontWeight: theme.isDarkTheme? 400 : 600 }}
+          >
             These tiles are <motion.div className="emphasis strong" style={{ display: 'inline-block' }}
               animate={{
                 y: [0,-5,5,-5,5,0],

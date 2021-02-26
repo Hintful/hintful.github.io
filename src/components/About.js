@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion'
 import { AwesomeButton } from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
 import toast, { Toaster } from 'react-hot-toast';
 import ReactGA from 'react-ga';
 import cv from "./doc/cv.pdf";
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const variants = {
   hidden: {
@@ -42,12 +43,16 @@ const notifyContact = () => toast("Please contact me directly. Thank you!", {
 })
 
 const About = () => {
+  const { theme } = useContext(ThemeContext);
   return (  
     <motion.div className="about page"
       variants={variants}
       initial="hidden"
       animate="visible"
       exit="exit"
+      style={{
+        color: theme.isDarkTheme ? theme.darkTheme.sub : theme.lightTheme.sub
+      }}
     >
       <h2><i class="fas fa-code emphasis"></i>&nbsp;About </h2>
       <br/>
@@ -73,7 +78,7 @@ const About = () => {
         {/* <a href="./doc" download="cv.pdf"> */}
         <a href={cv} target="_blank">
           <AwesomeButton 
-            type="primary"
+            type= {theme.isDarkTheme ? "gplus" : "primary"}
             size="large"
             onPress={() => {
               ReactGA.event({

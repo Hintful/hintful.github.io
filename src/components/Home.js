@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useContext } from 'react';
 import Typewriter from "typewriter-effect";
+import { ThemeContext } from '../contexts/ThemeContext';
 
 const variants = {
   hidden: {
@@ -28,6 +29,7 @@ const variants = {
 }
 
 const Home = () => {
+  const { theme } = useContext(ThemeContext);
   
   return (  
     <motion.div className="home"
@@ -35,12 +37,17 @@ const Home = () => {
       animate="visible"
       exit="exit"
       variants={variants}
+      style={{
+      }}
     >
       <motion.div className="intro-text"
         initial="hidden"
         animate="visible"
         exit="exit"
         variants={variants}
+        style={{
+          color: theme.isDarkTheme ? '#ececec' : 'black'
+        }}
       >
         Hi&nbsp;
         <motion.div className="hi-emoji" style={{ display: "inline-block" }}
@@ -55,7 +62,8 @@ const Home = () => {
         My name is <span style={{
           background: "linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%",
           webkitBackgroundClip: "text",
-          webkitTextFillColor: "transparent"
+          webkitTextFillColor: "transparent",
+          fontWeight: theme.isDarkTheme ? 600 : 400
           }}>Kurt</span>!
         <motion.div className="typewriter"
           initial={{ opacity: 0 }}
@@ -74,7 +82,7 @@ const Home = () => {
               // typewriter actions
               .pauseFor(2000)
               // .typeString("I'm a <span style='color: skyblue'>Software Engineer</span>!")
-              .typeString("I'm a <span style='background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent'>Software Engineer</span>!")
+              .typeString("I'm a <span style='background: linear-gradient(135deg, #c544e6 0%, #2eb6d8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;'>Software Engineer</span>!")
               .pauseFor(1500)
               .deleteChars(18)
               .pauseFor(500)
