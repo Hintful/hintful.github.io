@@ -19,7 +19,7 @@ const ProjectView = () => {
       title: "ARAM.GG",
       date: "Mar, 2021",
       githubLink: "https://github.com/Hintful/aram.gg",
-      desc: "A Full-stack Web application that analyzes and visualizes users' online game, League of Legend performance. Users' gameplay data are fetched via Riot Games Developer AI and stored in PostgreSQL database. API endpoints are created and utilized to fulfill various queries.",
+      desc: "A Full-stack Web application that analyzes and visualizes users' online game, League of Legend performance. Users' gameplay data are fetched via Riot Games Developer API and stored in PostgreSQL database. API endpoints are created and utilized to fulfill various queries.",
       tags: ['React', 'Django', 'PostgreSQL', 'REST API', 'Docker', 'Chakra UI', 'SCSS'],
       demoLink: ""
     },
