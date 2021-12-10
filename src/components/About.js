@@ -69,9 +69,8 @@ const About = () => {
       >🎓</motion.div>&nbsp;
       <span className="emphasis strong"><strong>New Grad Developer</strong></span>!</p>
       <p>I have studied and <span classname="emphasis strong">completed all degree requirements</span> in <span className="emphasis strong">University of Waterloo</span> as of December, 2020,
-      and will be receiving <span className="emphasis strong">Bachelor's Degree in Computer Science</span> in June, 2021!</p>
-      <p>My current field of interest is <span className="emphasis strong">Front End Web Development</span>, which I've been learning enthusiastically since late January of 2021.
-      However, I'm still keen on learning more about <span className="emphasis strong">Software Engineering</span> as well!</p>
+      and have received <span className="emphasis strong">Bachelor's Degree in Computer Science</span> in June, 2021!</p>
+      <p>I'm currently working as a <span className="emphasis strong">Software Development Engineer</span> at <span className="emphasis strong">Amazon</span>. Feel free to reach out to me!</p>
       <br/>
       
       <div className="cv-button-div">
