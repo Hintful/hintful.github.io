@@ -67,15 +67,13 @@ const About = () => {
           }
         }}
       >🎓</motion.div>&nbsp;
-      <span className="emphasis strong"><strong>New Grad Developer</strong></span>!</p>
-      <p>I have studied and <span classname="emphasis strong">completed all degree requirements</span> in <span className="emphasis strong">University of Waterloo</span> as of December, 2020,
-      and have received <span className="emphasis strong">Bachelor's Degree in Computer Science</span> in June, 2021!</p>
+      <span className="emphasis strong"><strong>New Grad Software Engineer</strong></span> located in <span className="emphasis strong">Toronto, ON, Canada</span>!</p>
+      <p>I have graduated from <span className="emphasis strong">University of Waterloo</span> with a <span className="emphasis strong">Bachelor's Degree in Computer Science</span> in June, 2021.</p>
       <p>I'm currently working as a <span className="emphasis strong">Software Development Engineer</span> at <span className="emphasis strong">Amazon</span>. Feel free to reach out to me!</p>
       <br/>
       
       <div className="cv-button-div">
-        {/* <a href="./doc" download="cv.pdf"> */}
-        <a href={cv} target="_blank">
+        <a href={cv} target="_blank" rel="noreferrer">
           <AwesomeButton 
             type= {theme.isDarkTheme ? "gplus" : "primary"}
             size="large"
