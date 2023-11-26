@@ -11,7 +11,7 @@ const Contact = () => {
         });
     }
     return ( 
-        <div className="flex-col mt-48 text-white h-screen backdrop-blur-lg bg-black/0">
+        <div className="flex-col mt-48 text-white h-screen backdrop-blur-0 bg-black/0">
             <Toaster />
             <div className="relative z-0 -mb-36 rounded-full blur-[128px] opacity-100 w-48 h-48 bg-blue-500 top-20 left-40" />
             <div className="relative z-0 -mb-36 rounded-full blur-[96px] opacity-75 w-36 h-48 bg-purple-300 top-20 -left-10" />
@@ -46,7 +46,7 @@ const Contact = () => {
                         </svg>
                     </div>
                     <div className="relative w-full">
-                        <input className="block p-2.5 w-56 z-20 text-sm text-white border-gray-600 bg-gray-700 rounded-e-lg rounded-s-gray-100 rounded-s-2 border outline-none focus:outline-none" value="choi.kurt3@gmail.com" readOnly />
+                        <input className="block p-2.5 w-56 z-20 text-sm text-white border-gray-600 bg-gray-700 rounded-e-lg rounded-s-gray-100 border outline-none focus:outline-none" value="choi.kurt3@gmail.com" readOnly />
                         <button onClick={() => copyEmail()} className="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:outline-none">Copy</button>
                     </div>
                 </div>
