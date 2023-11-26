@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #0d0e0e;
+  margin: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@layer components {
+  .text-gradient-primary {
+    @apply bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-500 inline-block text-transparent bg-clip-text;
+  }
+  .gradient-primary {
+    @apply bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-500 transition-all duration-150 ease-in-out;
+  }
+}
+
+.gradient-underline {
+  background-image: linear-gradient(120deg, #22d3ee 0%, #3b82f6 50%, #a855f7 100%);
+  background-repeat: no-repeat;
+  background-size: 120% 0.15em;
+  background-position: 0 85%;
+  transition: background-size 0.05s ease-in-out;
+}
+
+.gradient-underline:hover {
+  background-size: 120% 85%;
+  padding-top: 0.2em;
+}
+
+.grain:before {
+  content: "";
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 182px;
+  opacity: 0.13;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.blur-backdrop {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  
+  background: rgba(225, 225, 225, 0);
+  
+  mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+  
+  -webkit-mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+}
