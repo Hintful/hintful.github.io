@@ -9,7 +9,6 @@ const Navbar = () => {
   const location = useLocation();
 
   const routes = [
-    { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -36,8 +35,9 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="relative z-50">
-          <span className="text-xl font-display font-medium tracking-tight">
-            <span className="text-primary">kurtchoi</span>.dev
+          <span className="text-xl font-display font-medium tracking-tight hover:text-gradient-highlight">
+            <span className="font-bold">kurtchoi</span>
+            <span className="font-normal">.dev</span>
           </span>
         </Link>
 

@@ -28,7 +28,7 @@ const HeroSection = () => {
           style={{ animationDelay: "0.3s" }}
         >
           <span className="block">Hello, I'm a</span>
-          <span className="text-gradient">Software Engineer</span>
+          <span className="text-gradient-highlight">Software Engineer</span>
           <span className="block">crafting digital experiences.</span>
         </h1>
 
@@ -38,8 +38,12 @@ const HeroSection = () => {
           }`}
           style={{ animationDelay: "0.5s" }}
         >
-          I build elegant, intuitive interfaces and robust backend solutions
-          that help businesses thrive in the digital world.
+          I build{" "}
+          <span className="text-gradient-highlight font-medium">
+            elegant, intuitive interfaces
+          </span>{" "}
+          and robust backend solutions that help businesses thrive in the
+          digital world.
         </p>
 
         <div
@@ -50,7 +54,7 @@ const HeroSection = () => {
         >
           <button
             onClick={downloadResume}
-            className="group inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="group inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium transition-colors bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 text-white hover:bg-gradient-to-r hover:from-orange-600 hover:via-purple-600 hover:to-blue-600 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <FileText className="mr-2 h-4 w-4" />
             View Resume
