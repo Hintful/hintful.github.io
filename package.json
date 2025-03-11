@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "yarn run build",
-    "deploy": "yarn predeploy && gh-pages -d dist -c true -m 'Deploy to GitHub Pages' --cname=kurtchoi.dev"
+    "deploy": "gh-pages -d dist --cname kurtchoi.dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
