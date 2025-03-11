@@ -77,6 +77,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    /* Prevent layout shift when scrollbars appear */
+    overflow-y: scroll;
   }
 
   body {
