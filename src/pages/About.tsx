@@ -130,7 +130,7 @@ const About = () => {
         {/* Experience section with timeline */}
         <div
           className={`mb-16 opacity-0 ${isVisible ? "animate-fade-up" : ""}`}
-          style={{ animationDelay: "0.8s" }}
+          style={{ animationDelay: "0.5s" }}
         >
           <h2 className="text-xl md:text-2xl font-display font-semibold mb-6 flex items-center tracking-tight">
             <Briefcase className="mr-2" />
@@ -176,7 +176,7 @@ const About = () => {
         {/* Technical Skills section */}
         <div
           className={`mb-16 opacity-0 ${isVisible ? "animate-fade-up" : ""}`}
-          style={{ animationDelay: "0.5s" }}
+          style={{ animationDelay: "0.8s" }}
         >
           <h2 className="text-xl md:text-2xl font-display font-semibold mb-4 flex items-center tracking-tight">
             <Code className="mr-2" />
