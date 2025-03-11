@@ -7,6 +7,7 @@ import { Toaster as Sonner } from "sonner";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./layouts/MainLayout";
 import Index from "./pages/Index";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,14 @@ const App = () => (
             element={
               <MainLayout>
                 <Index />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <MainLayout>
+                <Contact />
               </MainLayout>
             }
           />
