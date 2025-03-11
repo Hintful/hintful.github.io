@@ -74,7 +74,7 @@ const About = () => {
     : skills;
 
   return (
-    <div className="py-16 md:py-24">
+    <div className="py-16 md:py-24 px-6">
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
         <h1
