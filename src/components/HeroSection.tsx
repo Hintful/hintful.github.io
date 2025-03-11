@@ -21,17 +21,6 @@ const HeroSection = () => {
       className="flex flex-col justify-center items-center min-h-[calc(100vh-120px)] py-12 md:py-20 relative overflow-hidden"
     >
       <div className="w-full max-w-4xl mx-auto px-4 md:px-8 relative">
-        <div
-          className={`opacity-0 transform ${
-            isVisible ? "animate-fade-up" : ""
-          }`}
-          style={{ animationDelay: "0.1s" }}
-        >
-          <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary mb-6">
-            Software Engineer
-          </span>
-        </div>
-
         <h1
           className={`text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-balance mb-6 opacity-0 transform ${
             isVisible ? "animate-fade-up" : ""
@@ -61,7 +50,7 @@ const HeroSection = () => {
         >
           <button
             onClick={downloadResume}
-            className="group inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary/90 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="group inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-medium transition-colors bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <FileText className="mr-2 h-4 w-4" />
             View Resume
