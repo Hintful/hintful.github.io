@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import MainLayout from "./layouts/MainLayout";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,14 @@ const App = () => (
             element={
               <MainLayout>
                 <Contact />
+              </MainLayout>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <MainLayout>
+                <About />
               </MainLayout>
             }
           />
