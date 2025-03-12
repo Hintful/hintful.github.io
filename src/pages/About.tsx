@@ -4,40 +4,9 @@ import {
   Code,
   GraduationCap,
   Book,
-  ExternalLink,
   Server,
-  Database,
-  Braces,
-  Layers,
-  PenTool,
-  Ship,
-  Cloud,
-  Share2,
   Building2,
 } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
-
-const skills = [
-  { name: "React", category: "frontend", icon: <Layers size={14} /> },
-  { name: "JavaScript", category: "frontend", icon: <Braces size={14} /> },
-  { name: "TypeScript", category: "frontend", icon: <Braces size={14} /> },
-  { name: "Go", category: "backend", icon: <Braces size={14} /> },
-  { name: "Python", category: "backend", icon: <Braces size={14} /> },
-  { name: "Java", category: "backend", icon: <Braces size={14} /> },
-  { name: "Node.js", category: "backend", icon: <Server size={14} /> },
-  { name: "MongoDB", category: "database", icon: <Database size={14} /> },
-  { name: "SQL", category: "database", icon: <Database size={14} /> },
-  { name: "AWS", category: "devops", icon: <Cloud size={14} /> },
-  { name: "Docker", category: "devops", icon: <Ship size={14} /> },
-  { name: "TailwindCSS", category: "frontend", icon: <PenTool size={14} /> },
-  { name: "Redux", category: "frontend", icon: <Share2 size={14} /> },
-];
 
 // Experience data with company icons
 const experiences = [
@@ -63,15 +32,10 @@ const experiences = [
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  const filteredSkills = activeFilter
-    ? skills.filter((skill) => skill.category === activeFilter)
-    : skills;
 
   return (
     <div className="py-16 md:py-24 px-6">
@@ -173,82 +137,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Technical Skills section */}
-        <div
-          className={`mb-16 opacity-0 ${isVisible ? "animate-fade-up" : ""}`}
-          style={{ animationDelay: "0.8s" }}
-        >
-          <h2 className="text-xl md:text-2xl font-display font-semibold mb-4 flex items-center tracking-tight">
-            <Code className="mr-2" />
-            Technical Skills
-          </h2>
-
-          {/* Skill filter buttons */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            <button
-              onClick={() => setActiveFilter(null)}
-              className={cn(
-                "px-3 py-1 text-xs rounded-full transition-all",
-                activeFilter === null
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              )}
-            >
-              All
-            </button>
-            {Array.from(new Set(skills.map((s) => s.category))).map(
-              (category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveFilter(category)}
-                  className={cn(
-                    "px-3 py-1 text-xs rounded-full transition-all flex items-center gap-1",
-                    activeFilter === category
-                      ? "bg-primary/90 text-primary-foreground"
-                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                  )}
-                >
-                  {getCategoryIcon(category)}
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </button>
-              )
-            )}
-          </div>
-
-          {/* Skills display */}
-          <div className="flex flex-wrap gap-2">
-            {filteredSkills.map((skill, index) => (
-              <TooltipProvider key={skill.name}>
-                <Tooltip delayDuration={100}>
-                  <TooltipTrigger asChild>
-                    <span
-                      className="px-3 py-1.5 rounded-md text-sm transition-all hover:bg-primary hover:text-primary-foreground cursor-default
-                        bg-secondary text-secondary-foreground
-                        shadow-sm hover:shadow flex items-center gap-1.5"
-                      style={{
-                        animationDelay: `${0.6 + index * 0.05}s`,
-                        opacity: 0,
-                        animation: isVisible
-                          ? `fade-in 0.5s ease-out forwards ${
-                              0.1 + index * 0.05
-                            }s`
-                          : "none",
-                      }}
-                      key={index}
-                    >
-                      {skill.icon}
-                      {skill.name}
-                    </span>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p className="capitalize">{skill.category}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            ))}
-          </div>
-        </div>
-
         {/* Education Section */}
         <div
           className={`opacity-0 ${isVisible ? "animate-fade-up" : ""}`}
@@ -262,7 +150,7 @@ const About = () => {
           <div className="bg-secondary/10 p-6 rounded-lg shadow-sm border border-border">
             <h3 className="text-lg font-semibold">BCS in Computer Science</h3>
             <p className="text-muted-foreground">
-              University of Waterloo • June, 2021
+              University of Waterloo • June 2021
             </p>
             <p className="mt-2 text-sm md:text-base">
               Specialized in Computer Science technologies.
@@ -287,22 +175,6 @@ const About = () => {
       </div>
     </div>
   );
-};
-
-// Helper function to get category icon
-const getCategoryIcon = (category: string) => {
-  switch (category) {
-    case "frontend":
-      return <Code size={14} />;
-    case "backend":
-      return <Server size={14} />;
-    case "database":
-      return <Database size={14} />;
-    case "devops":
-      return <ExternalLink size={14} />;
-    default:
-      return null;
-  }
 };
 
 export default About;

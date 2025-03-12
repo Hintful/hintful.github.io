@@ -19,7 +19,7 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col justify-center items-center min-h-[calc(100vh-120px)] py-12 md:py-20 relative overflow-hidden"
+      className="flex flex-col justify-center items-center min-h-[calc(100vh-120px)] py-12 md:py-20 relative overflow-hidden select-none"
     >
       <div className="w-full max-w-4xl mx-auto px-4 md:px-8 relative">
         <div
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 display: "inline-block",
                 transformOrigin: "center",
               }}
-              animate={{ rotate: [0, 15, -15, 15, -15, 15, 0] }}
+              animate={{ rotate: [0, 15, -15, 15, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,

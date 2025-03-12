@@ -79,10 +79,23 @@
     scroll-behavior: smooth;
     /* Prevent layout shift when scrollbars appear */
     overflow-y: scroll;
+    /* Prevent horizontal scrollbar during animations */
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
     @apply bg-background text-foreground font-sans transition-colors duration-300;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Prevent scrollbar jumps during transitions */
+  #root {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
   }
 }
 
@@ -111,5 +124,9 @@
 
   .text-gradient-highlight {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500;
+  }
+
+  .ease-custom {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }

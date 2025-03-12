@@ -1,13 +1,12 @@
 import { useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Navbar from "@/components/Navbar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-interface MainLayoutProps {
+interface PageContentLayoutProps {
   children: React.ReactNode;
 }
 
-const MainLayout = ({ children }: MainLayoutProps) => {
+const PageContentLayout = ({ children }: PageContentLayoutProps) => {
   const location = useLocation();
   const childrenElements = useRef<HTMLDivElement>(null);
 
@@ -50,17 +49,14 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden">
-      <Navbar />
-      <ScrollArea className="flex-grow">
-        <main className="px-4 sm:px-6 md:px-8 lg:px-16 mx-auto w-full max-w-[1400px] relative">
-          <div ref={childrenElements} className="space-y-6">
-            {children}
-          </div>
-        </main>
-      </ScrollArea>
-    </div>
+    <ScrollArea className="flex-grow">
+      <main className="px-4 sm:px-6 md:px-8 lg:px-16 mx-auto w-full max-w-[1400px] relative min-h-[calc(100vh-80px)] py-12">
+        <div ref={childrenElements} className="space-y-6">
+          {children}
+        </div>
+      </main>
+    </ScrollArea>
   );
 };
 
-export default MainLayout;
+export default PageContentLayout;
