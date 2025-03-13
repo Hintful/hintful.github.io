@@ -47,7 +47,7 @@ const HeroSection = () => {
             ,
           </span>
           <span className="block">I'm a</span>
-          <span className="antialiased italic text-gradient-highlight tracking-tighter">
+          <span className="antialiased italic text-gradient-highlight tracking-tighter overflow-visible pr-1.5">
             Software Engineer
           </span>
           <span className="block">crafting digital experiences.</span>
@@ -60,7 +60,7 @@ const HeroSection = () => {
           style={{ animationDelay: "0.5s" }}
         >
           I build{" "}
-          <span className="antialiased italic text-gradient-highlight font-medium">
+          <span className="antialiased italic text-gradient-highlight font-medium overflow-visible">
             elegant, intuitive interfaces
           </span>{" "}
           and robust backend solutions that help businesses thrive in the
